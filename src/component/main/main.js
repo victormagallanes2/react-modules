@@ -11,7 +11,6 @@ class Main extends Component {
        render() {
          return (
 			  <main>
-			  	<Menu />
 			  	<div className="Contenido">
 				    <Switch>
 				      <Route exact path='/' component={Home}/>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Toggle from './toggle';
 import Onclick from './onclick';
+import ChangeCss from './change_css';
 
 
 class Events extends Component {
@@ -9,6 +10,7 @@ class Events extends Component {
     return <div>
              <Onclick />
              <Toggle />
+             <ChangeCss />
            </div>
        }
   }

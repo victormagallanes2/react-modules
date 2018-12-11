@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 class Home extends Component {
@@ -6,13 +7,6 @@ class Home extends Component {
          return (
               <div className="Home">
                 <h5>Home</h5>
-                <p>Home</p>
-                <h5>Welcome to the Tornadoes Website!</h5>
-                <p>Home</p>
-                <h5>Home</h5>
-                <p>Home</p>
-                <h5>Home</h5>
-                <p>Home</p>
               </div>
            );
          }

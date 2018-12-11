@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ContainerList from './container.js';
 
 
-export default class List extends React.Component {
+class List extends Component {
   constructor(props) {
     super(props)
     this.state = { list: [] }
@@ -30,3 +30,5 @@ export default class List extends React.Component {
   }
 
 }
+
+export default List

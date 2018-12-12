@@ -20,36 +20,34 @@
 }
 
 main {
-	
-	border: 4px solid silver;
-
+  background-color: #f2f2f2;
 }
 
-.Contenido {
-	width: 68%;
-	border: red solid 3px;
-	float: right;
+.wrapper {
 	height: 700px;
 	margin-top: 70px;
 }
 
 
-.Menu {
-
-    border: black solid 3px;
+.menu {
     height: 700px;
     width: 30%;
     float: left;
-    margin-top: 70px;
-
+    padding: 10px;
 }
 
-.Menu-oculto {
-
-    border: black solid 3px;
+.menu-hidden {
     height: 700px;
     width: 30%;
     float: left;
-    margin-top: 70px;
     margin-left: -31%;
+    padding: 10px;
+}
+
+.link {
+  margin-left: 15px;
+}
+
+.nav-item:hover {
+  background-color: #D3D3D3;
 }

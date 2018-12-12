@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Toggle from './toggle';
 import Onclick from './onclick';
 import ChangeCss from './change_css';
+import DropdownExample from '.././header/dropdown';
 
 
 class Events extends Component {
@@ -11,6 +12,7 @@ class Events extends Component {
              <Onclick />
              <Toggle />
              <ChangeCss />
+             <DropdownExample />
            </div>
        }
   }

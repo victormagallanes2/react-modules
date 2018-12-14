@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
-export default class ListRow extends React.Component {
+class ListRow extends Component {
   render() {
     return(
-            <article>
-          
-              <label>{this.props.id} </label>
-              <label> {this.props.title}</label>
-            </article>
+            <tr>
+              <th scope="row">{this.props.id}</th>
+              <td>{this.props.username}</td>
+              <td>{this.props.email}</td>
+              <td>{this.props.website}</td>
+            </tr>
     );
   }
 }
+
+export default ListRow

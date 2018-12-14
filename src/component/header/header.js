@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-
+import DropdownExample from '.././header/dropdown';
 
 
 class Header extends Component {
@@ -32,8 +32,8 @@ class Header extends Component {
                       size="lg"
 				    />
 				  </button>
-		
-				  <ul className="navbar-nav">
+          <DropdownExample />
+{/* 				  <ul className="navbar-nav">
 				    
 				    <li className="nav-item dropdown">
 				      <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -44,7 +44,7 @@ class Header extends Component {
 				        <a className="dropdown-item" href="#">Salir</a>
 				      </div>
 				    </li>
-				  </ul>
+				  </ul> */}
 				</nav>
 			  </header>
 

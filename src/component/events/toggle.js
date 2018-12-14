@@ -10,13 +10,16 @@ class Toggle extends Component {
 
   render(){
     const { showing } = this.state;
-    return <div>
-	         <h4>Evento Toggle</h4>
-	         <button onClick={() => this.setState({ showing: !showing })}>toggle</button>
-	         <div style={{ display: (showing ? 'block' : 'none') }}>
-	         <p>Contenido de mi div</p>
+    return <div className="example">
+            <h5>Evento Toggle</h5>
+            <br></br>
+            <button onClick={() => this.setState({ showing: !showing })}>toggle</button>
+            <div style={{ display: (showing ? 'block' : 'none') }}>
+            <div className="toggle-container">
+              Contenido de mi div
+            </div>
+            </div>
 	         </div>
-	       </div>
        }
   }
 

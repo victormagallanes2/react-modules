@@ -14,11 +14,13 @@ class Onclick extends Component {
   }
  
   render(){
-    return <div>
-             <h4>Evento Onclick</h4>
-             <button onClick={this.update}>Onclick</button><br></br>
+    return <div className="example">
+             <h5>Evento Onclick</h5>
              <br></br>
-             <span>{this.state.message}</span>
+             <button onClick={this.update}>Onclick</button>
+             <div className="toggle-container">
+              {this.state.message}
+             </div>
           </div>
    }
   }

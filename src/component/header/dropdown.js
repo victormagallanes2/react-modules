@@ -24,17 +24,13 @@ class  DropdownExample extends Component {
     
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
-          Dropdown
+        <DropdownToggle caret className="drop">
+          Admin
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem>Some Action</DropdownItem>
-          <DropdownItem disabled>Action (disabled)</DropdownItem>
+          <DropdownItem>Perfil</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>Foo Action</DropdownItem>
-          <DropdownItem>Bar Action</DropdownItem>
-          <DropdownItem>Quo Action</DropdownItem>
+          <DropdownItem>Salir</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

@@ -8,15 +8,17 @@
 }
 
 .menu-button {
-  border-radius: 50px;
-  background-color: #4285f4;
-  border:0;
-  outline:none;
+  border-radius: 5px;
+  border-color: #f8f9fa;
   padding: 10px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: white; 
 }
 
 .menu-button:active {     
-    background-color:#0059b3;    
+    background-color: white;    
 }
 
 main {
@@ -35,6 +37,8 @@ main {
     width: 25%;
     float: left;
     padding: 10px;
+    -webkit-transition: margin-left 1s; /* Safari */
+    transition: margin-left 0.2s;
 }
 
 .menu-hidden {
@@ -43,6 +47,8 @@ main {
     float: left;
     margin-left: -31%;
     padding: 10px;
+    -webkit-transition: margin-left 0.2s; /* Safari */
+    transition: margin-left 0.2s;
 }
 
 .link {
@@ -84,7 +90,7 @@ main {
 }
 
 .marco {
-  border: 12px solid #4285F4;
+  border: 12px solid #ffffff;
 }
 
 .tablewhite {

@@ -2,19 +2,6 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import DropdownExample from '.././header/dropdown';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-
 
 
 class Header extends Component {
@@ -31,38 +18,37 @@ class Header extends Component {
     }
 
        render() {
-        let btn_class = this.state.black ? "menu-hidden" : "menu";  
+        let btn_class = this.state.black ? "menu-hidden" : "menu";
 
-    return (
+         return (
          	<div>
-            <Navbar className="ml-auto fixed-top" color="light" light expand="md" >
-              <button className="menu-button" onClick={this.changeColor.bind(this)}>
-                <FontAwesomeIcon
-                  icon="bars"
-                          color="#000000"
-                          size="lg"
-                />
-              </button>             
-              <Collapse navbar>
-                <Nav className="ml-auto" navbar>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Admin
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                        Perfil
-                      </DropdownItem>
-                      <DropdownItem divider />
-                      <DropdownItem>
-                        Salir
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
-                </Nav>
-              </Collapse>
-            </Navbar>
-           <div className={btn_class}>
+			  <header>
+			   <nav className="navbar navbar-expand-sm bg-blue justify-content-between fixed-top">
+		
+				  <button className="menu-button" onClick={this.changeColor.bind(this)}>
+				    <FontAwesomeIcon
+				      icon="bars"
+                      color="#ffffff"
+                      size="lg"
+				    />
+				  </button>
+          <DropdownExample />
+{/* 				  <ul className="navbar-nav">
+				    
+				    <li className="nav-item dropdown">
+				      <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+				      Admin
+				      </a>
+				      <div className="dropdown-menu">
+				        <a className="dropdown-item" href="#">Mi perfil</a>
+				        <a className="dropdown-item" href="#">Salir</a>
+				      </div>
+				    </li>
+				  </ul> */}
+				</nav>
+			  </header>
+
+			     <div className={btn_class}>
               <ul className="nav flex-column">
                 <li className="nav-item">
                   <Link to='/'>
@@ -89,8 +75,8 @@ class Header extends Component {
                    /><label className="link">Eventos</label></a></Link>
                 </li>
               </ul>
-            </div>            
-          </div>
+            </div>
+            </div>
            );
          }
     }

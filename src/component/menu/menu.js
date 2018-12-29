@@ -1,21 +1,54 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 class Menu extends Component {
        render() {
          return (
-            <div className="Menu">
-              <nav>
-                <ul>
-                  <li><Link to='/'>Home</Link></li>
-                  <li><Link to="listado">Listado</Link></li>
-                  <li><Link to="/events">Eventos</Link></li>
-                  <li><Link to="/">Formularios</Link></li>
-                  <li><Link to="/">Login</Link></li>
-                  <li><Link to="/">Comunicar 2  o mas Component</Link></li>
-                </ul>
-              </nav>
+            <div>
+              <ul className="nav flex-column">
+                <li className="nav-item">
+                  <Link to='/'>
+                  <a className="nav-link active" href="#">
+                  <FontAwesomeIcon
+                      icon="home"
+                      color="#000000"
+                      size="lg"
+                  />
+                   <label className="link">Home</label></a></Link>
+                </li>
+               <li className="nav-item">
+                  <Link to='/listado'>
+                  <a className="nav-link active" href="#">
+                  <FontAwesomeIcon
+                      icon="list-alt"
+                      color="#000000"
+                      size="lg"
+                  />
+                  <label className="link">Listado</label></a></Link>
+               </li>
+                <li className="nav-item">
+                  <Link to='/events'>
+                  <a className="nav-link active" href="#">
+                  <FontAwesomeIcon
+                      icon="sun"
+                      color="#000000"
+                      size="lg"
+                   />
+                <label className="link">Eventos</label></a></Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/login'>
+                  <a className="nav-link active" href="#">
+                  <FontAwesomeIcon
+                      icon="sun"
+                      color="#000000"
+                      size="lg"
+                   />
+                <label className="link">Formulario</label></a></Link>
+                </li>                
+              </ul>
             </div>
            );
          }

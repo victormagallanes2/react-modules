@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
-import DropdownExample from '.././header/dropdown';
+import Menu from '.././menu/menu';
+
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -63,33 +59,8 @@ class Header extends Component {
               </Collapse>
             </Navbar>
            <div className={btn_class}>
-              <ul className="nav flex-column">
-                <li className="nav-item">
-                  <Link to='/'>
-                  <a className="nav-link active" href="#"><FontAwesomeIcon
-                      icon="home"
-                      color="#000000"
-                      size="lg"
-                   /><label className="link">Home</label></a></Link>
-                </li>
-               <li className="nav-item">
-                  <Link to='/listado'>
-                  <a className="nav-link active" href="#"><FontAwesomeIcon
-                      icon="list-alt"
-                      color="#000000"
-                      size="lg"
-                   /><label className="link">Listado</label></a></Link>
-                </li>
-                <li className="nav-item">
-                  <Link to='/events'>
-                  <a className="nav-link active" href="#"><FontAwesomeIcon
-                      icon="sun"
-                      color="#000000"
-                      size="lg"
-                   /><label className="link">Eventos</label></a></Link>
-                </li>
-              </ul>
-            </div>            
+             <Menu />
+           </div>            
           </div>
            );
          }

@@ -6,6 +6,7 @@ import App from './component/app/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faHome, faListAlt, faSun} from '@fortawesome/free-solid-svg-icons';
+import './index.css';
 
 library.add(faBars, faHome, faListAlt, faSun);
 

@@ -9,7 +9,7 @@ class Menu extends Component {
             <div>
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <Link to='/'>
+                  <Link to='/dashboard/home'>
                   <a className="nav-link active" href="#">
                   <FontAwesomeIcon
                       icon="home"
@@ -19,7 +19,7 @@ class Menu extends Component {
                    <label className="link">Home</label></a></Link>
                 </li>
                <li className="nav-item">
-                  <Link to='/listado'>
+                  <Link to='/dashboard/listado'>
                   <a className="nav-link active" href="#">
                   <FontAwesomeIcon
                       icon="list-alt"
@@ -29,7 +29,7 @@ class Menu extends Component {
                   <label className="link">Listado</label></a></Link>
                </li>
                 <li className="nav-item">
-                  <Link to='/events'>
+                  <Link to='/dashboard/events'>
                   <a className="nav-link active" href="#">
                   <FontAwesomeIcon
                       icon="sun"

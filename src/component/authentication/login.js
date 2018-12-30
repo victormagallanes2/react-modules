@@ -4,8 +4,6 @@ import {
   FormGroup, Label, Input,
   Button,
 } from 'reactstrap';
-import { Route } from 'react-router-dom'
-import { Router } from 'react-router';
 
 class Login extends Component {
   render() {
@@ -39,9 +37,6 @@ class Login extends Component {
           <Button>Submit</Button>
         </Form>
       </Container>
-      <Router>
-      <Route path='/login' component={Login}/>
-      </Router>
       </div>
     );
   }

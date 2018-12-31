@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './onclick.css';
 
 
 class Onclick extends Component {
@@ -14,11 +15,11 @@ class Onclick extends Component {
   }
  
   render(){
-    return <div className="example">
+    return <div className="example-onclick">
              <h5>Evento Onclick</h5>
              <br></br>
              <button onClick={this.update}>Onclick</button>
-             <div className="toggle-container">
+             <div className="onclick-container">
               {this.state.message}
              </div>
           </div>

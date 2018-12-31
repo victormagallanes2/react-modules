@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './toggle.css';
 
 
 class Toggle extends Component {
@@ -10,7 +11,7 @@ class Toggle extends Component {
 
   render(){
     const { showing } = this.state;
-    return <div className="example">
+    return <div className="example-toggle">
             <h5>Evento Toggle</h5>
             <br></br>
             <button onClick={() => this.setState({ showing: !showing })}>toggle</button>

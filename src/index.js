@@ -5,11 +5,13 @@ import * as serviceWorker from './serviceWorker';
 import App from './component/app/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faHome, faListAlt, faSun} from '@fortawesome/free-solid-svg-icons';
-import './index.css';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHome} from '@fortawesome/free-solid-svg-icons';
+import { faListAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+
 
 library.add(faBars, faHome, faListAlt, faSun);
-
 
 render((
   <BrowserRouter>

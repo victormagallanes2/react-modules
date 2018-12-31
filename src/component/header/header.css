@@ -1,0 +1,36 @@
+ .navbar {
+  min-height: 70px;
+}
+
+.menu-button {
+  border-radius: 5px;
+  border-color: #f8f9fa;
+  padding: 10px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: white; 
+}
+
+.menu-button:active {     
+    background-color: white;    
+}
+
+.menu {
+    height: 700px;
+    width: 25%;
+    float: left;
+    padding: 10px;
+    -webkit-transition: margin-left 1s; /* Safari */
+    transition: margin-left 0.2s;
+}
+
+.menu-hidden {
+    height: 700px;
+    width: 25%;
+    float: left;
+    margin-left: -31%;
+    padding: 10px;
+    -webkit-transition: margin-left 0.2s; /* Safari */
+    transition: margin-left 0.2s;
+}

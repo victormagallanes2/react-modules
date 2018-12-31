@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ListRow from './row.js';
+import ListRow from './row/row.js';
 import { Table } from 'reactstrap';
+import './container.css';
 
 
 class ContainerList extends Component {

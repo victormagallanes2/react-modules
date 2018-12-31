@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Collapse, Navbar, Nav } from 'reactstrap';
+import { UncontrolledDropdown, DropdownToggle } from 'reactstrap';
+import { DropdownMenu, DropdownItem } from 'reactstrap';
 import Menu from '.././menu/menu';
-
-import {
-  Collapse,
-  Navbar,
-  Nav,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-
+import './header.css';
 
 
 class Header extends Component {
     constructor(){
         super();
-
         this.state = {
            black: true
         }

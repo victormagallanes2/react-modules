@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Toggle from './toggle';
-import Onclick from './onclick';
-import ChangeCss from './change_css';
+import Toggle from './toggle/toggle';
+import Onclick from './onclick/onclick';
+import ChangeCss from './change_css/change_css';
 
 
 class Events extends Component {

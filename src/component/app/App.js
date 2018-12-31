@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../header/header';
-import Main from '../main/main';
+import { Redirect, Switch, Route } from "react-router-dom";
 import Login from '../authentication/login'
-import { Redirect, Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import Home from '../home/home'
-import Events from '../events/events'
 import Dashboard from '../dashboard/dashboard'
 
 

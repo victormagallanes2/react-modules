@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Container, Col, Form,
-  FormGroup, Label, Input,
-  Button,
-} from 'reactstrap';
+import { Container, Col, Form } from 'reactstrap';
+import { FormGroup, Label, Input, Button } from 'reactstrap';
+
 
 class Login extends Component {
   render() {

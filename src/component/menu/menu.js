@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './menu.css';
 
 
 class Menu extends Component {
@@ -9,45 +10,35 @@ class Menu extends Component {
             <div>
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <Link to='/dashboard/home'>
-                  <a className="nav-link active" href="#">
+                  <Link className="li-margin" to='/dashboard/home'>
+                  
                   <FontAwesomeIcon
                       icon="home"
                       color="#000000"
                       size="lg"
                   />
-                   <label className="link">Home</label></a></Link>
+                   <label className="link">Home</label></Link>
                 </li>
                <li className="nav-item">
-                  <Link to='/dashboard/listado'>
-                  <a className="nav-link active" href="#">
+                  <Link className="li-margin" to='/dashboard/listado'>
+                  
                   <FontAwesomeIcon
                       icon="list-alt"
                       color="#000000"
                       size="lg"
                   />
-                  <label className="link">Listado</label></a></Link>
+                  <label className="link">Listado</label></Link>
                </li>
                 <li className="nav-item">
-                  <Link to='/dashboard/events'>
-                  <a className="nav-link active" href="#">
+                  <Link className="li-margin" to='/dashboard/events'>
+                  
                   <FontAwesomeIcon
                       icon="sun"
                       color="#000000"
                       size="lg"
                    />
-                <label className="link">Eventos</label></a></Link>
-                </li>
-                <li className="nav-item">
-                  <Link to='/login'>
-                  <a className="nav-link active" href="#">
-                  <FontAwesomeIcon
-                      icon="sun"
-                      color="#000000"
-                      size="lg"
-                   />
-                <label className="link">Formulario</label></a></Link>
-                </li>                
+                <label className="link">Eventos</label></Link>
+                </li>               
               </ul>
             </div>
            );

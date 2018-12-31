@@ -1,12 +1,9 @@
 main {
-	
-	border: 4px solid silver;
-
+  background-color: #f2f2f2;
 }
 
-.contenido {
-	width: 68%;
-	border: red solid 3px;
-	float: right;
-	height: 500px;
+.wrapper {
+	height: 700px;
+  margin-top: 70px;
+  padding-top: 15px;
 }

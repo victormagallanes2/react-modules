@@ -1,0 +1,13 @@
+.link {
+  margin-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.li-margin {
+  margin-left: 12px;
+}
+
+.nav-item:hover {
+  background-color: #D3D3D3;
+}

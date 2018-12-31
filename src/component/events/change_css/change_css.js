@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './change_css.css';
 
 
 class ChangeCss extends Component {
@@ -18,10 +19,10 @@ class ChangeCss extends Component {
         let btn_class = this.state.black ? "btn btn-default" : "btn btn-success";
 
         return (
-            <div className="example">
+            <div className="example-change_css">
             <h5>Cambio de estilo css</h5>
              <br></br>
-             <div className="toggle-container">
+             <div className="change_css-container">
                 <button className={btn_class} onClick={this.changeColor.bind(this)}>
                     Clikeame
                 </button>

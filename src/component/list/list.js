@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContainerList from './container.js';
+import ContainerList from './container/container.js';
 import ReactLoading from 'react-loading';
 
 

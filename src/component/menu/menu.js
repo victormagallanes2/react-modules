@@ -11,7 +11,6 @@ class Menu extends Component {
               <ul className="nav flex-column">
                 <li className="nav-item">
                   <Link className="li-margin" to='/dashboard/home'>
-                  
                   <FontAwesomeIcon
                       icon="home"
                       color="#000000"
@@ -38,7 +37,18 @@ class Menu extends Component {
                       size="lg"
                    />
                 <label className="link">Eventos</label></Link>
-                </li>               
+                </li>
+                <li className="nav-item">
+                  <Link className="li-margin" to='/dashboard/forms'>
+                  
+                  <FontAwesomeIcon
+                      icon="list-alt"
+                      color="#000000"
+                      size="lg"
+                   />
+                <label className="link">Formulario</label></Link>
+                </li>                
+                         
               </ul>
             </div>
            );

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Container, Col, Form } from 'reactstrap';
+import { Form } from 'reactstrap';
 import { FormGroup, Label, Input, Button } from 'reactstrap';
+import './login.css';
 
 
 class Login extends Component {
   render() {
     return (
-     <div>
-      <Container className="login">
-        <h2>Sign In</h2>
+     <div className="login d-flex justify-content-center">
         <Form className="form">
-          <Col>
+        <h2 className="d-flex justify-content-center">Login</h2>
             <FormGroup>
               <Label>Email</Label>
               <Input
@@ -20,8 +19,6 @@ class Login extends Component {
                 placeholder="myemail@email.com"
               />
             </FormGroup>
-          </Col>
-          <Col>
             <FormGroup>
               <Label for="examplePassword">Password</Label>
               <Input
@@ -31,10 +28,8 @@ class Login extends Component {
                 placeholder="********"
               />
             </FormGroup>
-          </Col>
           <Button>Submit</Button>
         </Form>
-      </Container>
       </div>
     );
   }

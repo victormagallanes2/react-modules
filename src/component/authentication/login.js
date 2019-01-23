@@ -2,34 +2,69 @@ import React, { Component } from 'react';
 import { Form } from 'reactstrap';
 import { FormGroup, Label, Input, Button } from 'reactstrap';
 import './login.css';
+import superagent from 'superagent';
 
 
 class Login extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      username: '',
+      password: ''
+    }
+  }
+
+  onChangeUsername(event) {
+    this.setState({username: event.target.value})
+  }
+
+  onChangePassword(event) {
+    this.setState({password: event.target.value})
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    superagent
+    .post('http://localhost:8000/api-token-auth/')
+    .send({'username': this.state.username, 'password': this.state.password})
+    .end((err, res) => {
+      if(err) {this.setState({errorMessage:"Authentication Failed"}); return;}
+      localStorage.setItem('token', res.body.token);
+     });
+    }
+  
+
   render() {
     return (
      <div className="login d-flex justify-content-center">
-        <Form className="form">
+        <Form className="form" onSubmit={this.handleSubmit.bind(this)}>
         <h2 className="d-flex justify-content-center">Login</h2>
             <FormGroup>
-              <Label>Email</Label>
+              <Label>Usuario</Label>
               <Input
-                type="email"
-                name="email"
-                id="exampleEmail"
+                type="text"
+                name="username"
+                value={this.state.username}
+                onChange={this.onChangeUsername.bind(this)}
                 placeholder="myemail@email.com"
               />
             </FormGroup>
             <FormGroup>
-              <Label for="examplePassword">Password</Label>
+              <Label for="examplePassword">Contraseña</Label>
               <Input
                 type="password"
                 name="password"
-                id="examplePassword"
+                value={this.state.password}
+                onChange={this.onChangePassword.bind(this)}
                 placeholder="********"
               />
             </FormGroup>
           <Button>Submit</Button>
+      
         </Form>
+        
       </div>
     );
   }

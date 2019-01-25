@@ -38,7 +38,7 @@ class Menu extends Component {
                    />
                 <label className="link">Eventos</label></Link>
                 </li>
-                <li className="nav-item">
+{/*                <li className="nav-item">
                   <Link className="li-margin" to='/dashboard/forms'>
                   
                   <FontAwesomeIcon
@@ -47,7 +47,7 @@ class Menu extends Component {
                       size="lg"
                    />
                 <label className="link">Formulario</label></Link>
-                </li>                
+                </li> */}               
                          
               </ul>
             </div>

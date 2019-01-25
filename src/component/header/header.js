@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Collapse, Navbar, Nav } from 'reactstrap';
 import { UncontrolledDropdown, DropdownToggle } from 'reactstrap';
 import { DropdownMenu, DropdownItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import Menu from '.././menu/menu';
 import './header.css';
 
@@ -18,6 +19,11 @@ class Header extends Component {
     changeColor(){
        this.setState({black: !this.state.black})
     }
+
+    logout() {
+      localStorage.removeItem('token');
+      window.location.reload();
+      }
 
        render() {
         let btn_class = this.state.black ? "menu-hidden" : "menu";  
@@ -40,10 +46,10 @@ class Header extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>
-                        Perfil
+                        <Link  to='/dashboard/user'>Perfil</Link>
                       </DropdownItem>
                       <DropdownItem divider />
-                      <DropdownItem>
+                      <DropdownItem onClick={this.logout.bind(this)}>
                         Salir
                       </DropdownItem>
                     </DropdownMenu>

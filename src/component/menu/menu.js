@@ -19,7 +19,7 @@ class Menu extends Component {
                    <label className="link">Home</label></Link>
                 </li>
                <li className="nav-item">
-                  <Link className="li-margin" to='/dashboard/listado'>
+                  <Link className="li-margin" to='/dashboard/list'>
                   
                   <FontAwesomeIcon
                       icon="list-alt"

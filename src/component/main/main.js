@@ -4,8 +4,8 @@ import Home from '../home/home'
 import List from '../list/list'
 import Events from '../events/events'
 import Forms from '../form/form'
-import User from '.././user/user';
-import './main.css';
+import UserDetail from '../user/detail'
+import './main.css'
 
 
 class Main extends Component {
@@ -18,8 +18,7 @@ class Main extends Component {
 				      <Route path='/dashboard/list' component={List}/>
 				      <Route exact path='/dashboard/events' component={Events}/>
 				      <Route exact path='/dashboard/forms' component={Forms}/>
-				      <Route exact path='/dashboard/user' component={User}/>
-
+				      <Route exact path='/dashboard/user/:id' component={UserDetail}/>
 				    </Switch>
 				</div>
 			  </main>

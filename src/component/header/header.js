@@ -22,11 +22,16 @@ class Header extends Component {
 
     logout() {
       localStorage.removeItem('token');
+      localStorage.removeItem('user');
       window.location.reload();
       }
+    imp() {
+      const user = localStorage.getItem('user');
+      console.log(user);
+      }      
 
        render() {
-        let btn_class = this.state.black ? "menu-hidden" : "menu";  
+        let btn_class = this.state.black ? "menu-hidden" : "menu";
 
     return (
          	<div>
@@ -45,8 +50,8 @@ class Header extends Component {
                       Admin
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>
-                        <Link  to='/dashboard/user'>Perfil</Link>
+                      <DropdownItem onClick={this.imp.bind(this)}>
+                        <Link  to='/dashboard/user/{user}'>Perfil</Link>
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem onClick={this.logout.bind(this)}>

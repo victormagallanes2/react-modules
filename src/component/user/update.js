@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
-class User extends Component {
+class UserUpdate extends Component {
   render() {
     return (
     <div className="container">
@@ -36,4 +36,4 @@ class User extends Component {
   }
 }
 
-export default User
+export default UserUpdate

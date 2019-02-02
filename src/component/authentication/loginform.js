@@ -32,6 +32,7 @@ class LoginForm extends Component {
     .end((err, res) => {
       if(err) {this.setState({errorMessage:"Authentication Failed"}); return;}
       localStorage.setItem('token', res.body.token);
+      localStorage.setItem('user', res.body.user.id);
       this.props.onSuccessfullogin();
     window.location.reload();
      });

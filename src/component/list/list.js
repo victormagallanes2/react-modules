@@ -23,12 +23,12 @@ class List extends Component {
     let type = 'spin';
     let color = '#000000';
     if (this.state.list.length > 0) {
+      console.log(this.state.list)
       return (
           <ContainerList listado={this.state.list} />
       );
     }
     else {
-    
       return <div class="container h-100">
                <div class="row h-100 justify-content-center align-items-center">
                  <ReactLoading type={type} color={color} height={'10%'} width={'10%'} />
@@ -37,7 +37,6 @@ class List extends Component {
              
     }
   }
-
 }
 
 export default List

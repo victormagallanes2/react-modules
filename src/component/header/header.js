@@ -50,9 +50,13 @@ class Header extends Component {
                       Admin
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem onClick={this.imp.bind(this)}>
-                        <Link  to='/dashboard/user/{user}'>Perfil</Link>
-                      </DropdownItem>
+                      
+                    <Link  to='/dashboard/user/{user}'>
+                    <DropdownItem onClick={this.imp.bind(this)}>
+                    Perfil
+                    </DropdownItem>
+                    </Link>
+                      
                       <DropdownItem divider />
                       <DropdownItem onClick={this.logout.bind(this)}>
                         Salir

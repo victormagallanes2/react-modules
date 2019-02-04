@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ReactLoading from 'react-loading';
+import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import './detail.css'
 
 
@@ -9,10 +12,10 @@ class UserDetail extends Component {
   }
 
   componentWillMount() {
-    /*const userid = localStorage.getItem('user');*/
     const token = localStorage.getItem('token');
-    const JWTtoken = `JWT ${token}`
-    fetch('http://localhost:8000/user/detail/7/', {  
+    const JWTtoken = `JWT ${token}`;
+    const userid = localStorage.getItem('user');
+    fetch(`http://localhost:8000/user/detail/${userid}/`, {  
       method: 'get',
       mode: 'cors',
       headers: {
@@ -25,52 +28,70 @@ class UserDetail extends Component {
         return response.json()
       })
       .then((user) => {
-        this.setState({ user: user })
+        this.setState({ user: user})
       })
   }
 
   render() {
-    const diccionario = this.state.user
-    for (let x in diccionario) {
-      console.log(x.username)
+    let type = 'spin';
+    let color = '#000000';
+    const user = localStorage.getItem('user');
+    if (this.state.user !== 'undefined') {
+      return (
+      <div className="container">
+        <div className="row d-flex justify-content-center space_line">      
+         <div className="col-sm-2">
+           <span className="d-block p-2"></span>
+         </div>
+         <div className="col-sm-6">
+           <Link  to='/dashboard/user/update/{user}'><Button color="success">Edit</Button></Link>
+         </div>        
+        </div>      
+        <div className="row d-flex justify-content-center space_line">      
+         <div className="col-sm-2">
+           <span className="d-block p-2">Usuario</span>
+         </div>
+         <div className="col-sm-6">
+           <span className="d-block p-2 input-color">{this.state.user['username']}</span>
+         </div>        
+        </div>
+        <div className="row d-flex justify-content-center space_line">      
+         <div className="col-sm-2">
+           <span className="d-block p-2">Nombre</span>
+         </div>
+         <div className="col-sm-6">
+           <span className="d-block p-2 input-color">{this.state.user['first_name']}</span>
+         </div>        
+       </div>
+        <div className="row d-flex justify-content-center space_line">      
+         <div className="col-sm-2">
+           <span className="d-block p-2">Apellido</span>
+         </div>
+         <div className="col-sm-6">
+           <span className="d-block p-2 input-color">{this.state.user['last_name']}</span>
+         </div>        
+       </div>
+        <div className="row d-flex justify-content-center space_line">      
+         <div className="col-sm-2">
+           <span className="d-block p-2">Correo</span>
+         </div>
+         <div className="col-sm-6">
+           <span className="d-block p-2 input-color">{this.state.user['email']}</span>
+         </div>        
+       </div>             
+     </div> 
+     );
     }
-    return (
-    <div className="container">
-      <div className="row d-flex justify-content-center space_line">      
-       <div className="col-sm-2">
-         <span className="d-block p-2">Usuario</span>
-       </div>
-       <div className="col-sm-6">
-         <span className="d-block p-2 input-color">victor</span>
-       </div>        
-     </div>
-      <div className="row d-flex justify-content-center space_line">      
-       <div className="col-sm-2">
-         <span className="d-block p-2">Nombre</span>
-       </div>
-       <div className="col-sm-6">
-         <span className="d-block p-2 input-color">victor</span>
-       </div>        
-     </div>
-      <div className="row d-flex justify-content-center space_line">      
-       <div className="col-sm-2">
-         <span className="d-block p-2">Apellido</span>
-       </div>
-       <div className="col-sm-6">
-         <span className="d-block p-2 input-color">magallanes</span>
-       </div>        
-     </div>
-      <div className="row d-flex justify-content-center space_line">      
-       <div className="col-sm-2">
-         <span className="d-block p-2">Correo</span>
-       </div>
-       <div className="col-sm-6">
-         <span className="d-block p-2 input-color">victormagallanes2@gmail.com</span>
-       </div>        
-     </div>             
-   </div>      
-    );
-  }
+    else {
+      return <div className="container h-100">
+              <div className="row h-100 justify-content-center align-items-center">
+                <ReactLoading type={type} color={color} height={'10%'} width={'10%'} />
+             </div>
+            </div>
+    
+             
+    }
+ }
 }
 
 export default UserDetail

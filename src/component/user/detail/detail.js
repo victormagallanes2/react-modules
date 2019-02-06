@@ -35,8 +35,7 @@ class UserDetail extends Component {
   render() {
     let type = 'spin';
     let color = '#000000';
-    const user = localStorage.getItem('user');
-    if (this.state.user !== 'undefined') {
+    if (Object.keys(this.state.user).length !== 0) {
       return (
       <div className="container">
         <div className="row d-flex justify-content-center space_line">      
@@ -44,7 +43,7 @@ class UserDetail extends Component {
            <span className="d-block p-2"></span>
          </div>
          <div className="col-sm-6">
-           <Link  to='/dashboard/user/update/{user}'><Button color="success">Edit</Button></Link>
+           <Link  to='/dashboard/user/update'><Button color="success" unsername='asdasd'>Edit</Button></Link>
          </div>        
         </div>      
         <div className="row d-flex justify-content-center space_line">      
@@ -94,4 +93,4 @@ class UserDetail extends Component {
  }
 }
 
-export default UserDetail
+export default UserDetail;

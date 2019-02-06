@@ -23,7 +23,6 @@ class List extends Component {
     let type = 'spin';
     let color = '#000000';
     if (this.state.list.length > 0) {
-      console.log(this.state.list)
       return (
           <ContainerList listado={this.state.list} />
       );

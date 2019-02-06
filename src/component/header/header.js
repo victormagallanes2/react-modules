@@ -51,7 +51,7 @@ class Header extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       
-                    <Link  to='/dashboard/user/{user}'>
+                    <Link  to='/dashboard/user/detail'>
                     <DropdownItem onClick={this.imp.bind(this)}>
                     Perfil
                     </DropdownItem>

@@ -14,8 +14,8 @@ class ContainerList extends Component {
                   <tr>
                     <th>Id</th>
                     <th>Username</th>
+                    <th>First Name</th>
                     <th>Email</th>
-                    <th>Website</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -23,8 +23,8 @@ class ContainerList extends Component {
                     return <ListRow key={ list.id }
                                     id={ list.id }
                                     username={ list.username }
-                                    email={ list.email }
-                                    website={ list.website }/>
+                                    first_name={ list.first_name }
+                                    email={ list.email }/>
                           })
                   }
                 </tbody>

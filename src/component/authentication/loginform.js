@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'reactstrap';
 import { FormGroup, Label, Input, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import './login.css';
 import superagent from 'superagent';
 
@@ -62,10 +63,13 @@ class LoginForm extends Component {
                 onChange={this.onChangePassword.bind(this)}
                 placeholder="********"
               />
+
             </FormGroup>
           <Button type="submit">Submit</Button>
-      
+          <p><Link  to='/singup'>Registrarse</Link></p>
+         
         </Form>
+      
         
       </div>
     );

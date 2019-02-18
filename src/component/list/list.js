@@ -10,7 +10,17 @@ class List extends Component {
   }
 
   componentWillMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    const token = localStorage.getItem('token');
+    const JWTtoken = `JWT ${token}`;    
+    fetch('http://localhost:8000/user/list/', {  
+      method: 'get',
+      mode: 'cors',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': JWTtoken },
+     
+      })
       .then((response) => {
         return response.json()
       })

@@ -7,8 +7,8 @@ class ListRow extends Component {
             <tr>
               <th scope="row">{this.props.id}</th>
               <td>{this.props.username}</td>
+              <td>{this.props.first_name}</td>
               <td>{this.props.email}</td>
-              <td>{this.props.website}</td>
             </tr>
     );
   }

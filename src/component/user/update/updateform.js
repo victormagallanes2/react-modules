@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, Input } from 'reactstrap';
 import { Redirect } from 'react-router';
-import UserDetail from '../detail/detail'
 
 
 class UserUpdateForm extends Component {
@@ -47,7 +46,7 @@ componentWillReceiveProps(nextProps){
   }
 
   handleSubmit(event) {
-    event.preventDefault();
+
     const token = localStorage.getItem('token');
     const JWTtoken = `JWT ${token}`;
     const userid = localStorage.getItem('user');
@@ -67,18 +66,19 @@ componentWillReceiveProps(nextProps){
      
       })
     this.setState({ redirect: true });
+
     }
 
 
   render() {
-     const { redirect } = this.state;
+/*     const { redirect } = this.state;
 
      if (redirect) {
        return <Redirect push to='/dashboard/user/detail'/>;
-     }
+     }*/
     return (
       <div className="container">
-        <Form onSubmit={this.handleSubmit.bind(this)}>
+        <Form onSubmit={this.handleSubmit.bind(this)} action='/dashboard/user/detail'>
         <div className="row d-flex justify-content-center space_line">
          <div className="col-sm-2">
            <span className="d-block p-2"></span>
